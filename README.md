@@ -34,3 +34,9 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Design System
+
+A basic design system is configured with Tailwind CSS. Key colors, spacing, border radius and fonts are exposed as CSS variables in `src/app/globals.css` and mapped in `tailwind.config.ts`.
+
+Reusable components are placed under `src/components`. Visit `/design-system` while running the dev server to preview the available components.
