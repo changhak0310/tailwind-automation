@@ -19,6 +19,7 @@ const config: Config = {
         'neutral-100': 'var(--color-neutral-100)',
         'neutral-50': 'var(--color-neutral-50)',
         'primary-500': 'var(--color-primary-500)',
+        'secondary-500': 'var(--color-secondary-500)',
       },
       spacing: {
         1: 'var(--spacing-1)',

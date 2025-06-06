@@ -18,6 +18,7 @@
   --color-neutral-50:  #f5f5f5;  /* 아주 희미한 배경 에센스 (거의 쓰지 않음) */
 
   --color-primary-500: #8257e5; /* 보라 계열 톤, 강조할 때만 사용 */
+  --color-secondary-500: #4f46e5; /* 보라 계열 보조 색상 */
 
   --spacing-1:  0.25rem;   /* p-1 */
   --spacing-2:  0.5rem;    /* p-2 */
