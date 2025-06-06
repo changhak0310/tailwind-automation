@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface LiveStreamerCardProps {
   id: string
@@ -29,7 +30,12 @@ export default function LiveStreamerCard({
     >
       <div className="relative w-full h-[160px] bg-neutral-700">
         {isLive ? (
-          <img src={thumbnailUrl} alt={`${streamerName} 방송 썸네일`} className="absolute inset-0 w-full h-full object-cover" />
+          <Image
+            src={thumbnailUrl}
+            alt={`${streamerName} 방송 썸네일`}
+            fill
+            className="object-cover"
+          />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center bg-neutral-700">
             <span className="text-neutral-400 text-sm font-medium">OFFLINE</span>
@@ -48,7 +54,13 @@ export default function LiveStreamerCard({
       </div>
       <div className="p-3 flex flex-col justify-between h-[90px] sm:h-[100px] lg:h-[140px]">
         <div className="flex items-center space-x-3">
-          <img src={profileUrl} alt={`${streamerName} 프로필 사진`} className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-full bg-neutral-600 object-cover" />
+          <Image
+            src={profileUrl}
+            alt={`${streamerName} 프로필 사진`}
+            width={40}
+            height={40}
+            className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-full bg-neutral-600 object-cover"
+          />
           <div className="flex flex-col truncate">
             <span className="text-neutral-100 text-xs sm:text-sm font-medium truncate">{streamerName}</span>
             <span className="text-neutral-400 text-[0.65rem] sm:text-xs">{category}</span>

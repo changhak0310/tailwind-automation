@@ -1,6 +1,7 @@
-'use client'
 
+'use client'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Header() {
   return (
@@ -56,9 +57,11 @@ export default function Header() {
             className="w-8 h-8 rounded-full bg-neutral-600 overflow-hidden hover:ring-2 hover:ring-primary-500 transition"
             aria-label="프로필"
           >
-            <img
+            <Image
               src="/images/avatar-placeholder.png"
               alt="프로필"
+              width={32}
+              height={32}
               className="w-full h-full object-cover"
             />
           </button>

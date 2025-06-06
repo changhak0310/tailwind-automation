@@ -1,6 +1,8 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
+
 
 interface StreamCardProps {
   id: string
@@ -25,10 +27,11 @@ export default function StreamCard({
     <Link href={`/stream/${id}`}>
       <div className="bg-neutral-800 rounded-lg overflow-hidden hover:shadow-lg transition">
         <div className="relative h-40 bg-neutral-700">
-          <img
+          <Image
             src={thumbnailUrl}
             alt={`${streamerName} 썸네일`}
-            className="absolute inset-0 w-full h-full object-cover"
+            fill
+            className="object-cover"
           />
           {isLive && (
             <span className="absolute top-2 left-2 bg-red-600 text-xs font-semibold px-1.5 py-0.5 rounded text-white animate-pulse">
@@ -41,7 +44,13 @@ export default function StreamCard({
         </div>
         <div className="p-3 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <img src={profileUrl} alt={`${streamerName} 프로필`} className="w-8 h-8 rounded-full" />
+            <Image
+              src={profileUrl}
+              alt={`${streamerName} 프로필`}
+              width={32}
+              height={32}
+              className="rounded-full"
+            />
             <div className="flex flex-col">
               <span className="text-neutral-100 text-sm font-medium truncate">
                 {streamerName}
