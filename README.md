@@ -39,7 +39,12 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 A basic design system is configured with Tailwind CSS. Key colors, spacing, border radius and fonts are exposed as CSS variables in `src/app/globals.css` and mapped in `tailwind.config.ts`.
 
+Reusable components are placed under `src/components`. Visit `/design-system` while running the dev server to preview the available components.
+
 ## Streaming Demo
 
 A simple streaming layout is available on the home page. It shows 17 featured streamers using `Header`, `Sidebar` and `StreamCard` components. Dummy pages exist under `/stream/[id]` and `/clips`.
 =======
+## Streaming Demo
+
+A simple streaming layout is available on the home page. It shows 17 featured streamers using `Header`, `Sidebar` and `StreamCard` components. Dummy pages exist under `/stream/[id]` and `/clips`.
