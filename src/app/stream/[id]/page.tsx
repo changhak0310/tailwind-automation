@@ -1,6 +1,6 @@
 
-export default function StreamPage({ params }: { params: { id: string } }) {
-  const { id } = params
+export default async function StreamPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
   return (
     <main className="min-h-screen bg-neutral-900 text-neutral-100 p-6 space-y-6">
       <h1 className="text-2xl font-bold">스트리머 {id}</h1>
