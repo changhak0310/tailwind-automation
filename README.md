@@ -44,3 +44,7 @@ Reusable components are placed under `src/components`. Visit `/design-system` wh
 ## Streaming Demo
 
 A simple streaming layout is available on the home page. It shows 17 featured streamers using `Header`, `Sidebar` and `StreamCard` components. Dummy pages exist under `/stream/[id]` and `/clips`.
+=======
+## Streaming Demo
+
+A simple streaming layout is available on the home page. It shows 17 featured streamers using `Header`, `Sidebar` and `StreamCard` components. Dummy pages exist under `/stream/[id]` and `/clips`.
