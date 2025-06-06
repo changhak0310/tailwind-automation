@@ -38,7 +38,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Design System
 
-A basic design system is configured with Tailwind CSS. Key colors, spacing, border radius and fonts are defined as CSS variables in `src/app/globals.css`.
+A basic design system is configured with Tailwind CSS. Key colors, spacing, border radius and fonts are exposed as CSS variables in `src/app/globals.css` and mapped in `tailwind.config.ts`.
 
 Reusable components are placed under `src/components`. Visit `/design-system` while running the dev server to preview the available components.
 

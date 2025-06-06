@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import Sidebar from '@/components/Sidebar'
 import LiveStreamerCard from '@/components/LiveStreamerCard'
+import StreamCard from '@/components/StreamCard'
 import Footer from '@/components/Footer'
 
 const streamers = Array.from({ length: 17 }).map((_, i) => ({
@@ -15,6 +16,7 @@ const streamers = Array.from({ length: 17 }).map((_, i) => ({
 }))
 
 const sorted = [...streamers].sort((a, b) => b.viewers - a.viewers)
+}))
 
 export default function Home() {
   return (
@@ -28,6 +30,10 @@ export default function Home() {
             <div className="snap-x flex space-x-4 overflow-x-auto py-2 px-4 md:px-6 h-[320px] scrollbar-hide">
               {sorted.map((s) => (
                 <LiveStreamerCard
+            <h2 className="text-2xl font-bold mb-6">주요 스트리머</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {streamers.map((s) => (
+                <StreamCard
                   key={s.id}
                   id={s.id}
                   streamerName={s.name}
