@@ -34,7 +34,13 @@ export default function HighlightStreamCard({
         fill
         className="object-cover"
       />
-      <div className="absolute inset-0 bg-black bg-opacity-40" />
+      <div
+        className="absolute inset-0
+                  bg-gradient-to-b
+                  from-transparent
+                  via-transparent
+                  to-black/70"
+      />
       <div className="absolute bottom-4 left-4 right-4 text-neutral-100 space-y-2">
         <div className="flex items-center space-x-2">
           <Image
