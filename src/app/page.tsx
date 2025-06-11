@@ -7,7 +7,7 @@ import OfflineCard from '@/components/OfflineCard'
 const liveStreamers = Array.from({ length: 4 }).map((_, i) => ({
   id: String(i + 1),
   name: `스트리머 ${i + 1}`,
-  avatar: '/profile_shample.png',
+  avatar: '/profile_sample.png',
   thumbnail: '/thumbnail_sample.avif',
   title: '재미있는 게임 방송 중',
   category: '게임',
@@ -18,7 +18,7 @@ const liveStreamers = Array.from({ length: 4 }).map((_, i) => ({
 const offlineStreamers = Array.from({ length: 6 }).map((_, i) => ({
   id: String(i + 20),
   name: `오프라인 ${i + 1}`,
-  avatar: '/profile_shample.png',
+  avatar: '/profile_sample.png',
 }))
 
 export default function Home() {
