@@ -24,6 +24,7 @@ export default function DevDesignSystemLink() {
     <div className="fixed bottom-4 right-4 z-50 space-y-2 flex flex-col items-end">
       <LinkButton href={"/design-system"}>Design System</LinkButton>
       <LinkButton href={"./"}>Home</LinkButton>
+      <LinkButton href={"/streaminghub"}>streaminghub</LinkButton>
     </div>
   )
 }
