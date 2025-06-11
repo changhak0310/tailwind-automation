@@ -7,8 +7,8 @@ import Footer from '@/components/Footer'
 const liveStreamers = Array.from({ length: 5 }).map((_, i) => ({
   id: String(i + 1),
   name: `스트리머 ${i + 1}`,
-  avatar: '/images/avatar-placeholder.png',
-  thumbnail: '/images/thumbnail-placeholder.png',
+  avatar: '/profile_shample.png',
+  thumbnail: '/thumbnail_sample.avif',
   title: '재미있는 게임 방송 중',
   category: '게임',
   viewers: Math.floor(Math.random() * 1000) + 1,
@@ -18,7 +18,7 @@ const liveStreamers = Array.from({ length: 5 }).map((_, i) => ({
 const offlineStreamers = Array.from({ length: 8 }).map((_, i) => ({
   id: String(i + 20),
   name: `오프라인 ${i + 1}`,
-  avatar: '/images/avatar-placeholder.png',
+  avatar: '/profile_shample.png',
 }))
 
 export default function PreviewPage() {

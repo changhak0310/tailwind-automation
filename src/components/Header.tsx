@@ -58,7 +58,7 @@ export default function Header() {
             aria-label="프로필"
           >
             <Image
-              src="/images/avatar-placeholder.png"
+              src="/profile_shample.png"
               alt="프로필"
               width={32}
               height={32}
