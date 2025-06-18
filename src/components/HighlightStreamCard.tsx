@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useState, useEffect, useRef, CSSProperties } from 'react'
 import Image from 'next/image'
 
 interface HighlightStreamCardProps {
@@ -26,8 +27,36 @@ export default function HighlightStreamCard({
   chatSummary,
   isLive,
 }: HighlightStreamCardProps) {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [size, setSize] = useState<CSSProperties>({})
+
+  useEffect(() => {
+    const updateSize = () => {
+      const el = containerRef.current?.parentElement
+      if (!el) return
+      const parentWidth = el.clientWidth
+      const parentHeight = el.clientHeight
+      let height = Math.min(parentHeight, window.innerHeight * 0.6)
+      let width = height * (16 / 9)
+      if (width > parentWidth) {
+        width = parentWidth
+        height = width * (9 / 16)
+      }
+      setSize({ width, height })
+    }
+    updateSize()
+    window.addEventListener('resize', updateSize)
+    return () => window.removeEventListener('resize', updateSize)
+  }, [])
+
   return (
-    <div className="relative w-full h-full group" role="group" aria-label={`${name} 스트림 하이라이트`}>
+    <div
+      ref={containerRef}
+      style={size}
+      className="relative mx-auto group overflow-hidden"
+      role="group"
+      aria-label={`${name} 스트림 하이라이트`}
+    >
       <Image
         src={thumbnailUrl}
         alt={`${name} 방송 썸네일`}
