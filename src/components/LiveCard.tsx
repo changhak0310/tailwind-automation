@@ -29,8 +29,13 @@ export default function LiveCard({
       aria-label={`${name}님 실시간 방송 시청, 시청자 수 ${viewerCount}명, 카테고리 ${category}`}
       className="bg-neutral-800 rounded-lg overflow-hidden group hover:shadow-lg transition-shadow duration-200 cursor-pointer"
     >
-      <div className="relative w-full h-[140px] bg-neutral-700">
-        <Image src={thumbnailUrl} alt={`${name} 방송 썸네일`} fill className="object-cover" />
+      <div className="relative w-full aspect-video bg-neutral-700">
+        <Image
+          src={thumbnailUrl}
+          alt={`${name} 방송 썸네일`}
+          fill
+          className="object-cover"
+        />
         {isLive && (
           <>
             <span className="absolute top-2 left-2 bg-red-600 text-xs text-white px-1 py-0.5 rounded animate-pulse">
